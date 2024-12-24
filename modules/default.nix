@@ -1,3 +1,3 @@
 {
-  nixbox = import ./nixbox;
+  staypls = import ./staypls;
 }

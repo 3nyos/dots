@@ -2,7 +2,7 @@
 
   staypls = {
     enable = true;
-    dirs = ["/etc/ssh" "/etc/NetworkManager/system-connections" "/etc/nix" "/var/lib/pipewire" "/etc/passwd" "/etc/nixos" ];
+    dirs = ["/etc/ssh" "/etc/NetworkManager/system-connections" "/etc/nix" "/var/lib/pipewire" "/etc/passwd" "/etc/nixos" "/var/db/sudo"];
   };
 
   fileSystems."/" = {

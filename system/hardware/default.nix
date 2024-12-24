@@ -40,6 +40,12 @@
     options = ["noatime" "subvol=home"];
   };
 
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-label/NIXBOOT";
+    fsType = "vfat";
+    options = ["noatime"];
+  };
+
   swapDevices = [];
 
 }

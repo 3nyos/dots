@@ -45,6 +45,6 @@
     kernelModules = ["amdgpu"]; # if loading somehow fails during initrd but the boot continues, try again later
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     extraModulePackages = [];
-    virtualisation.virtualbox.guest.enable = true;
   };
+    virtualisation.virtualbox.guest.enable = true;
 }

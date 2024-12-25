@@ -7,9 +7,9 @@
   users.users = {
     # FIXME: Replace with your username
     mutableUsers = true;
-    root.password = "root"
+    root.password = "root";
     nixy = {
-      password = "nixy"
+      password = "nixy";
       isNormalUser = true;
 
       createHome = true;

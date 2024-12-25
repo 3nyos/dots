@@ -14,6 +14,7 @@
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/var/log"
+      "/etc/group"
     ];
   };
 

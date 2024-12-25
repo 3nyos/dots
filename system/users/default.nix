@@ -5,13 +5,12 @@
 }: {
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users = {
-    mutableUsers = true;
     users = {
     # FIXME: Replace with your username
 
-      root.password = "root";
+      root.initialPassword = "root";
       nixy = {
-        password = "nixy";
+        initialPassword = "nixy";
         isNormalUser = true;
 
         createHome = true;

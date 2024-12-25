@@ -4,25 +4,28 @@
   ...
 }: {
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
-  users.users = {
-    # FIXME: Replace with your username
+  users = {
     mutableUsers = true;
-    root.password = "root";
-    nixy = {
-      password = "nixy";
-      isNormalUser = true;
+    users = {
+    # FIXME: Replace with your username
 
-      createHome = true;
-      home = "/home/nixy";
+      root.password = "root";
+      nixy = {
+        password = "nixy";
+        isNormalUser = true;
 
-      shell = pkgs.zsh;
+        createHome = true;
+        home = "/home/nixy";
 
-      # openssh.authorizedKeys.keys = [
-      #   # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-      # ];
+        shell = pkgs.zsh;
+  
+        # openssh.authorizedKeys.keys = [
+        #   # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
+        # ];
 
-      # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = ["wheel" "networkmanager" "input"];
+        # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
+        extraGroups = ["wheel" "networkmanager" "input"];
+      };
     };
-  };
+  }
 }

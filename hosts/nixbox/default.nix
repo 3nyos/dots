@@ -6,8 +6,6 @@
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
-  systemd.enableEmergencyMode = false;
-
   hardware.cpu.amd.updateMicrocode = true;
   hardware.graphics.extraPackages = builtins.attrValues {
     inherit
@@ -42,11 +40,8 @@
       };
     };
     
-    initrd.availableKernelModules = ["ata_piix" "ohci_pci" "ehci_pci" "ahci" "sd_mod" "sr_mod"];
     initrd.kernelModules = ["amdgpu"]; # load amdgpu kernel module as early as initrd
     kernelModules = ["amdgpu"]; # if loading somehow fails during initrd but the boot continues, try again later
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
-    extraModulePackages = [];
   };
-    virtualisation.virtualbox.guest.enable = true;
 }

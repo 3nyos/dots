@@ -6,6 +6,8 @@
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
+  systemd.enableEmergencyMode = false;
+
   hardware.cpu.amd.updateMicrocode = true;
   hardware.graphics.extraPackages = builtins.attrValues {
     inherit

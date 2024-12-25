@@ -1,1 +1,3 @@
-
+{
+  nixbox = import ./nixbox
+}

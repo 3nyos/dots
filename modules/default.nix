@@ -1,3 +1,4 @@
 {
-  staypls = import ./staypls;
+  ...
+}: {
 }

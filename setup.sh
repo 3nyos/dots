@@ -11,11 +11,7 @@ ROOT_LABEL="NIXROOT"
 
 # Format the partitions
 mkfs.vfat -F 32 $BOOT_PARTITION
-fatlabel $BOOT_PARTITION $BOOT_LABEL
-if ! ls /dev/disk/by-label/ | grep -q $BOOT_LABEL; then
-    echo "Error: Boot label '$BOOT_LABEL' does not exist." >&2
-    exit 1
-fi
+sudo fatlabel $BOOT_PARTITION $BOOT_LABEL
 
 mkfs.btrfs -L $ROOT_LABEL $ROOT_PARTITION
 

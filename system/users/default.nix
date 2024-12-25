@@ -7,10 +7,7 @@
   users = {
     users = {
     # FIXME: Replace with your username
-
-      root.initialPassword = "root";
       nixy = {
-        initialPassword = "nixy";
         isNormalUser = true;
 
         createHome = true;

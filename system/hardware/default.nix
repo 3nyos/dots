@@ -15,6 +15,7 @@
       "/var/lib/systemd/coredump"
       "/var/log"
       "/etc/group"
+      "/etc/fstab"
     ];
   };
 

@@ -10,7 +10,7 @@
       safe.directory = "/home/user/.nixos";
       user = {
         email = "lovelypizzaparty@gmail.com";
-        name = "lovelypizzaparty";
+        name = "3nyos";
       };
     };
   };

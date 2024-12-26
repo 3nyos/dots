@@ -2,10 +2,13 @@
   config,
   pkgs,
   modulesPath,
+  lib,
   ...
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
+  services.fstrim.enable = true;
+  hardware.amdgpu.initrd.enable = true;
   hardware.cpu.amd.updateMicrocode =
     lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.graphics.extraPackages = builtins.attrValues {
@@ -41,7 +44,6 @@
       };
     };
 
-    initrd.kernelModules = ["amdgpu"]; # load amdgpu kernel module as early as initrd
     kernelModules = ["amdgpu"]; # if loading somehow fails during initrd but the boot continues, try again later
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
   };

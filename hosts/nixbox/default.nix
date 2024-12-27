@@ -9,8 +9,8 @@
 
   services.fstrim.enable = true;
   hardware.amdgpu.initrd.enable = true;
-  hardware.cpu.amd.updateMicrocode =
-    lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode = true;
+  hardware.enableRedistributableFirmware = true;
   hardware.graphics.extraPackages = builtins.attrValues {
     inherit
       (pkgs)

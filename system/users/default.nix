@@ -7,11 +7,11 @@
   users = {
     users = {
       # FIXME: Replace with your username
-      nixy = {
+      nyx = {
         isNormalUser = true;
 
         createHome = true;
-        home = "/home/nixy";
+        home = "/home/nyx";
 
         shell = pkgs.zsh;
 

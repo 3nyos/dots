@@ -1,3 +1,3 @@
 {
-  nixbox = import ./saturn;
+  saturn = import ./saturn;
 }

@@ -24,5 +24,5 @@
       };
     };
 in {
-  nixbox = mkHost "nixbox" "x86_64-linux";
+  saturn = mkHost "saturn" "x86_64-linux";
 }
